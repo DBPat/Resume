@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DBPat/Resume.git"
+  },
+  "author": "Dharmesh Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DBPat/Resume/issues"
+  },
+  "homepage": "https://github.com/DBPat/Resume#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
