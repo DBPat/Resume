@@ -28,7 +28,7 @@ app.get("/*",function(req,res){
     res.render("NotFound");
 });
 
-var port = process.env.port;
+var port = process.env.PORT;
 (!port)? port=3000 : port;
 
 app.listen(port, process.env.IP, function(){
