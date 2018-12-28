@@ -14,10 +14,26 @@
     background-color:#e3f2fd;
 }
 
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card {
+    margin-top: 10px;
+    border-width: 0.1rem;
+}
+
 .container{
     min-height: calc(95vh - 110px);
     max-width: 90%;
     margin-top: 1rem;
+}
+
+.body {
     font-family:  'Open Sans', sans-serif !important;
 }
 
