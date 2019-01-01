@@ -10,6 +10,44 @@
     padding: 1rem;
 }
 
+hr {
+    border-color: white;;
+}
+
+.project-info {
+    line-height: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.project-client {
+    color: darkgray;
+}
+
+.project-detail {
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+.project-detail-title {
+    font-size: 1.2rem;
+    color: darkgray;
+}
+
+.project-detail-item a:hover {
+    color: #89c8f7;
+    text-decoration: none;
+}
+
+.project-detail-item a {
+    color: #212529;
+}
+
+.project-detail-item {
+    list-style-type: none;
+    margin-left: -1.5rem;
+}
+
 .navbar {
     background-color:#e3f2fd;
 }
@@ -31,6 +69,7 @@
     min-height: calc(95vh - 110px);
     max-width: 90%;
     margin-top: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 .body {

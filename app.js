@@ -20,8 +20,36 @@ app.get("/Projects",function(req,res){
     res.render("projects");
 });
 
-app.get("/Contact",function(req,res){
-    res.render("contact");
+app.get("/Projects/GACondomFinder",function(req,res){
+    res.render("Projects/GACondomFinder");
+});
+
+app.get("/Projects/GradePredictor",function(req,res){
+    res.render("Projects/GradePredictor");
+});
+
+app.get("/Projects/BKMS",function(req,res){
+    res.render("Projects/BKMS");
+});
+
+app.get("/Projects/CICO",function(req,res){
+    res.render("Projects/CICO");
+});
+
+app.get("/Projects/BKMSApp",function(req,res){
+    res.render("Projects/BKMSApp");
+});
+
+app.get("/Projects/Yelpcamp",function(req,res){
+    res.render("Projects/Yelpcamp");
+});
+
+app.get("/Projects/BoxApp",function(req,res){
+    res.render("Projects/BoxApp");
+});
+
+app.get("/Projects/Drumkit",function(req,res){
+    res.render("Projects/Drumkit");
 });
 
 app.get("/*",function(req,res){
