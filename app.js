@@ -48,9 +48,6 @@ app.get("/Projects/BoxApp",function(req,res){
     res.render("Projects/BoxApp");
 });
 
-app.get("/Projects/Drumkit",function(req,res){
-    res.render("Projects/Drumkit");
-});
 
 app.get("/*",function(req,res){
     res.render("NotFound");

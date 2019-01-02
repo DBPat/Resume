@@ -11,10 +11,10 @@
             <aside class="sidebar col-xs-12 col-md-3 d-sm-block d-none">
                 <div class="row">
                     <div class="project-detail col-xl-12 col-xs-4">
-                        <h5 class="project-detail-title">Year</h5>
+                        <h5 class="project-detail-title">Time Frame</h5>
                         <ul>
                             <li class="project-detail-item">
-                                2018
+                                October 2018
                             </li>
                         </ul>
                     </div>
@@ -30,7 +30,7 @@
                             <h5 class="project-detail-title">Link</h5>
                             <ul>
                                 <li class="project-detail-item">
-                                    Check it Out
+                                    <a href="GradePredictor">Refresh the Page</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,19 +48,71 @@
                 </div>
             </aside>
 
-            <article class="col-xs-12 col-md-9">
-                <p class="project-info">
-                    Neural networks are cool.
+            <article class="col-xs-12 col-md-9 project-info">
+                <p>
+                    I am not an expert on neural networks, but was interested none the less. I discovered BrainJS, a javascript library 
+                    that allows the construction of neural networks for beginners. I did my research and followed several tuorials, before 
+                    starting my own project. I created a neural network and trained it using my current college transcript to create a grade predictor. 
+                    Due to the limits of BrainJS, the neural network has been trained with 42 data points, but exhibits a 6% error. 
                 </p>
-
-                <p class="project-info">
-                    I made one.
-                </p>
-
+                <div style="margin-left: 25%">
+                    <h5>Grade Predictor Demo</h5>
+    
+                    <div class="row">
+                        <div id="form" class="col-md-6 col-xs-12">
+                            <div class="form-group">
+                              <label for="subjectSelect">Course Subject</label>
+                              <select class="form-control" id="subjectSelect">
+                                <option>Biomedical</option>
+                                <option>Software</option>
+                                <option>Engineering</option>
+                                <option>General</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="levelSelect">Course Level</label>
+                              <select  class="form-control" id="levelSelect">
+                                <option>Undergrad</option>
+                                <option>Grad</option>
+                              </select>
+                            </div>
+                            <button id="submitButton"  class="btn btn-primary">Predict Grade</button>
+                        </div>
+                        <div id="grades" class="col-md-6 col-xs-12 d-none">
+                            <div class="row">
+                                <p>A: <span id="A"></span> %</p>
+                            </div>
+                            <div class="row">
+                                <p>B: <span id="B"></span> %</p>
+                            </div>
+                            <div class="row">
+                                <p>B+: <span id="Bplus"></span> %</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </article>
-
-
         </div>
     </div>
+    <script src="https://cdn.rawgit.com/BrainJS/brain.js/5797b875/browser.js"></script>
+    <script src="/javascript/neuralnetwork.js"></script>
+    <script>
+        document.getElementById('submitButton').addEventListener('click', predict);
+        function predict(){
+            console.log(net.run(Array.from({Software: 1, Grad: 1})));
+            console.log(net.run(Array.from({Biomedical: 1, Undergrad: 1})));
+
+            var subject = subjectSelect.value;
+            var level = levelSelect.value;
+            console.log({[subject]: 1, [level]: 1});
+            $("#A").html(net.run(Array.from({[subject]: 1, [level]: 1}))['A'].toFixed(3)*100);
+            $("#B").html(net.run(Array.from({[subject]: 1, [level]: 1}))['B'].toFixed(3)*100);
+            $("#Bplus").html(net.run(Array.from({[subject]: 1, [level]: 1}))['B+'].toFixed(4)*100);
+
+            $("#form").toggleClass("d-none");
+            $("#grades").toggleClass("d-none");
+
+        };
+    </script>
 
 <% include ../partials/footer %>
