@@ -1,13 +1,20 @@
-.footer{
-    position: fixed;
-    left: 0 ;
-    bottom: 0;
+body {
+    font-family:  'Open Sans', sans-serif;
+    height: 100%;
+}
+
+footer{
     width: 100%;
     background-color: #89c8f7;
     color:  black;
-    z-index: 1;
     margin: 0;
     padding: 1rem;
+}
+
+.container{
+    max-width: 87%;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
 }
 
 hr {
@@ -17,7 +24,7 @@ hr {
 .project-info {
     line-height: 2rem;
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .project-client {
@@ -61,18 +68,8 @@ hr {
 }
 
 .card {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     border-width: 0.1rem;
 }
 
-.container{
-    min-height: calc(95vh - 110px);
-    max-width: 90%;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-}
-
-.body {
-    font-family:  'Open Sans', sans-serif !important;
-}
 

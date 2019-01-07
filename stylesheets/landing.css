@@ -1,6 +1,7 @@
 body {
-    background-color: black;
-  }
+  font-family:  'Open Sans', sans-serif;
+  background-color: black;
+}
 
 button{
   z-index: 0;

@@ -53,7 +53,7 @@
                     I am not an expert on neural networks, but was interested none the less. I discovered BrainJS, a javascript library 
                     that allows the construction of neural networks for beginners. I did my research and followed several tuorials, before 
                     starting my own project. I created a neural network and trained it using my current college transcript to create a grade predictor. 
-                    Due to the limits of BrainJS, the neural network has been trained with 42 data points, but exhibits a 6% error. 
+                    Due to the limits of BrainJS, the neural network has been trained with 42 data points and exhibits a 6% error.
                 </p>
                 <div style="margin-left: 25%">
                     <h5>Grade Predictor Demo</h5>
@@ -95,8 +95,17 @@
         </div>
     </div>
     <script src="https://cdn.rawgit.com/BrainJS/brain.js/5797b875/browser.js"></script>
-    <script src="/javascript/neuralnetwork.js"></script>
+    <!-- <script src="/javascript/neuralnetwork.js"></script> -->
     <script>
+        window.onload = function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = "/javascript/neuralnetwork.js";
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+        }
+
         document.getElementById('submitButton').addEventListener('click', predict);
         function predict(){
             console.log(net.run(Array.from({Software: 1, Grad: 1})));
