@@ -1,0 +1,182 @@
+
+p {
+    margin: 0;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    margin: 1rem auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: lightskyblue;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container-tl {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container-tl::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: #89c8f7;
+    border: 4px solid #89c8f7;
+    top: 1.5rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* /Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    left: 30px;
+    border: medium solid #e3f2fd;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #e3f2fd transparent transparent;
+    z-index: 1;
+} 
+
+/* Place the timelime to the left */
+.timeline::after {
+left: 31px;
+}
+
+.content {
+    background-color: #e3f2fd;
+    position: relative;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    width: 100%;
+}
+
+
+/* Full-width containers */
+.container-tl {
+width: 100%;
+} 
+
+/* Make sure that all arrows are pointing leftwards */
+.container-tl::before {
+left: 2.9rem;
+border: medium solid white;
+border-width: 10px 10px 10px 0;
+border-color: transparent #e3f2fd transparent transparent;
+z-index: 1;
+}
+
+/* Make sure all circles are at the same spot */
+.left::after, .right::after {
+left: 1.4rem;
+}
+
+/* Make all right containers behave like the left ones */
+.right {
+left: 0%;
+}
+
+.content p {
+    display: inline-block;
+}
+
+.position-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.position-location {
+    font-size: 1.1rem;
+    display: flex;
+}
+
+.position-time {
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.position-info {
+    margin-bottom: 2.5rem;
+}
+
+i {
+    margin-left: 0.2rem;
+}
+
+/* Media queries - Responsive timeline on screens with different sizes */
+
+/* for screens 1400px and bigger */
+@media screen and (min-width: 1441px) { 
+    .position-time {
+        float: right;
+    }
+
+    .position-location {
+        float: left;
+    }
+
+    .position-info {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* for screens between 991px and 1400px */
+@media screen and (max-width: 1441px) and (min-width: 991px) {
+    .position-info {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .position-location {
+        margin-bottom: 0.2rem;
+    }
+
+}
+
+/* for screens between 991px and 710px */
+@media screen and (max-width: 991px) and (min-width: 725px) {
+    .position-time {
+        float: right;
+    }
+
+    .position-location {
+        float: left;
+    }
+
+    .position-info {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+/* for screens smaller than 710px */
+@media screen and (max-width: 725px) {
+    .position-info {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .position-location {
+        margin-bottom: 0.2rem;
+    }
+}

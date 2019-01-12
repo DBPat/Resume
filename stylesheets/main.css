@@ -1,6 +1,7 @@
 body {
     font-family:  'Open Sans', sans-serif;
     height: 100%;
+    background-color: #f8f9fa !important;
 }
 
 footer{
@@ -41,12 +42,12 @@ hr {
     color: darkgray;
 }
 
-.project-detail-item a:hover {
+.project-detail-item a:hover, .position-location a:hover{
     color: #89c8f7;
     text-decoration: none;
 }
 
-.project-detail-item a {
+.project-detail-item a, .position-location a {
     color: #212529;
 }
 
