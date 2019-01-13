@@ -5,7 +5,7 @@ app.use(express.static(__dirname));
 app.set("view engine","ejs");
 
 app.get("/",function(req,res){
-    res.render("landing");
+    res.redirect('/About');
 });
 
 app.get("/About",function(req,res){

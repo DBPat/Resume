@@ -1,12 +1,27 @@
+:root {
+    --lblue: #e3f2fd; 
+    --dblue: #89c8f7;
+    --fcolor: #050361;
+  }
+
 body {
     font-family:  'Open Sans', sans-serif;
     height: 100%;
-    background-color: #f8f9fa !important;
+    background-color: #f8f9fa;
+    color: var(--fcolor);
+}
+
+.header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
 }
 
 footer{
     width: 100%;
-    background-color: #89c8f7;
+    background-color: var(--dblue);
     color:  black;
     margin: 0;
     padding: 1rem;
@@ -18,9 +33,6 @@ footer{
     margin-bottom: 4rem;
 }
 
-hr {
-    border-color: white;;
-}
 
 .project-info {
     line-height: 2rem;
@@ -42,22 +54,32 @@ hr {
     color: darkgray;
 }
 
-.project-detail-item a:hover, .position-location a:hover{
-    color: #89c8f7;
+.project-detail-item a:hover, .position-location a:hover, .resume-edu a:hover,{
+    color: var(--dblue);
     text-decoration: none;
 }
 
-.project-detail-item a, .position-location a {
-    color: #212529;
+.project-detail-item a, .position-location a, .resume-edu a , .social-media a{
+    color: var(--fcolor);
+}
+
+.social-media {
+    justify-content: center;
+}
+
+.social-media i {
+    margin: 0.5rem;
+    transition: all .3s ease-in-out;
+}
+
+.social-media a:hover {
+    text-decoration: none;
+    transform: scale(1.2);
 }
 
 .project-detail-item {
     list-style-type: none;
     margin-left: -1.5rem;
-}
-
-.navbar {
-    background-color:#e3f2fd;
 }
 
 .card-text {
@@ -73,4 +95,42 @@ hr {
     border-width: 0.1rem;
 }
 
+.resume-section{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
 
+.resume-section img {
+    padding: 1rem 0;
+}
+
+.resume-about {
+    letter-spacing: 0.1rem;
+}
+
+.resume-about span{
+    text-align: center;
+}
+
+.resume-about ul li {
+    padding: 0.25rem;
+    text-align: left;
+}
+
+.resume-about p {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.resume-edu {
+    justify-content: center;
+    text-align: center;
+}
+
+.resume-edu span {
+    padding: 1rem;
+}
+
+.social-media {
+    font-size: 2rem;
+}
